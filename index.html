@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Équipes – Ligue 3 vs 3</title>
+
+<style>
+  body { font-family: Arial; background:#f5f5f5; margin:0; padding:0; }
+
+  /* MENU */
+  nav {
+    background:#1a3d7c;
+    padding:15px 0;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+    margin-bottom:25px;
+  }
+  nav ul {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:0;
+    padding:0;
+  }
+  nav a {
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+  }
+
+  h1 {
+    text-align:center;
+    color:#1a3d7c;
+    margin-bottom:30px;
+  }
+
+  /* GRID ÉQUIPES */
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    max-width:600px;
+    margin:auto;
+  }
+
+  .team-card {
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    transition:0.25s;
+    text-decoration:none;
+    color:black;
+  }
+  .team-card:hover { transform:scale(1.05); cursor:pointer; }
+
+  img { width:100px; height:100px; object-fit:contain; }
+</style>
+</head>
+
+<body>
+
+<!-- MENU MIS À JOUR -->
+<nav>
+  <ul>
+    <li><a href="accueil.html">Accueil</a></li>
+    <li><a href="index.html">Équipes</a></li>
+    <li><a href="Horaire.html">Horaire</a></li>
+    <li><a href="classement.html">Classement</a></li>
+    <li><a href="resultat.html">Résultats</a></li>
+    <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<h1>Équipes</h1>
+
+<div class="grid">
+
+  <a class="team-card" href="1.html">
+    <img src="1.png" alt="Équipe 1">
+    <h3>Équipe 1</h3>
+  </a>
+
+  <a class="team-card" href="2.html">
+    <img src="2.png" alt="Équipe 2">
+    <h3>Équipe 2</h3>
+  </a>
+
+  <a class="team-card" href="3.html">
+    <img src="3.png" alt="Équipe 3">
+    <h3>Équipe 3</h3>
+  </a>
+
+  <a class="team-card" href="4.html">
+    <img src="4.png" alt="Équipe 4">
+    <h3>Équipe 4</h3>
+  </a>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+

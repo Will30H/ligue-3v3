@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Classement</title>
+
+<style>
+    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
+
+    /* MENU */
+    nav {
+        background:#1a3d7c;
+        padding:15px 0;
+        box-shadow:0 3px 10px rgba(0,0,0,0.15);
+        margin-bottom:25px;
+    }
+    nav ul {
+        list-style:none;
+        display:flex;
+        justify-content:center;
+        gap:40px;
+        margin:0;
+        padding:0;
+    }
+    nav a {
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        font-weight:bold;
+    }
+
+    /* CARD */
+    .card {
+        background:white;
+        max-width:900px;
+        margin:auto;
+        padding:25px;
+        border-radius:15px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align:center;
+        color:#1a3d7c;
+        margin-bottom:20px;
+    }
+
+    /* TABLEAU CLASSEMENT */
+    table {
+        width:100%;
+        border-collapse:collapse;
+        margin-top:10px;
+        border-radius:10px;
+        overflow:hidden;
+    }
+
+    th {
+        background:#1a3d7c;
+        color:white;
+        padding:12px;
+        font-size:16px;
+    }
+
+    td {
+        padding:12px;
+        background:#f9fbfd;
+        border-bottom:1px solid #dce3ec;
+        text-align:center;
+        font-size:16px;
+    }
+
+    tr:nth-child(even) td {
+        background:#eef3f9;
+    }
+
+    .team-name {
+        font-weight:bold;
+        color:#1a3d7c;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav>
+  <ul>
+    <li><a href="accueil.html">Accueil</a></li>
+    <li><a href="index.html">Équipes</a></li>
+    <li><a href="Horaire.html">Horaire</a></li>
+    <li><a href="classement.html">Classement</a></li>
+    <li><a href="resultat.html">Résultats</a></li>
+    <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="card">
+    <h1>Classement</h1>
+
+    <table>
+        <tr>
+            <th>Position</th>
+            <th>Équipe</th>
+            <th>MJ</th>
+            <th>V</th>
+            <th>D</th>
+            <th>N</th>
+            <th>PTS</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td class="team-name">Équipe 1</td>
+            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td class="team-name">Équipe 2</td>
+            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td class="team-name">Équipe 3</td>
+            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td class="team-name">Équipe 4</td>
+            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

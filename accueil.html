@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Accueil – Ligue 3 vs 3</title>
+
+<style>
+    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
+
+    nav {
+        background:#1a3d7c;
+        padding:15px 0;
+        box-shadow:0 3px 10px rgba(0,0,0,0.15);
+        margin-bottom:25px;
+    }
+    nav ul {
+        list-style:none;
+        display:flex;
+        justify-content:center;
+        gap:40px;
+        margin:0;
+        padding:0;
+    }
+    nav a {
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        font-weight:bold;
+    }
+
+    .hero {
+        text-align:center;
+        padding:60px 20px;
+        background:white;
+        margin:20px auto;
+        max-width:900px;
+        border-radius:15px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        color:#1a3d7c;
+        font-size:40px;
+        margin-bottom:10px;
+    }
+
+    p {
+        font-size:18px;
+        color:#333;
+        margin-bottom:20px;
+    }
+
+    .btn {
+        display:inline-block;
+        padding:12px 25px;
+        background:#1a3d7c;
+        color:white;
+        text-decoration:none;
+        border-radius:8px;
+        font-size:18px;
+        font-weight:bold;
+        transition:0.2s;
+    }
+    .btn:hover { background:#163568; }
+
+    .grid {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
+        max-width:600px;
+        margin:40px auto;
+    }
+
+    .card {
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        text-align:center;
+        box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card a {
+        text-decoration:none;
+        color:#1a3d7c;
+        font-weight:bold;
+        font-size:18px;
+    }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="accueil.html">Accueil</a></li>
+    <li><a href="index.html">Équipes</a></li>
+    <li><a href="Horaire.html">Horaire</a></li>
+    <li><a href="classement.html">Classement</a></li>
+    <li><a href="resultat.html">Résultats</a></li>
+    <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+    <h1>Ligue 3 vs 3</h1>
+    <p>Bienvenue sur le site officiel de la ligue 3 contre 3.  
+       Consulte les équipes, l’horaire, les résultats, le classement et les règlements.</p>
+
+    <a class="btn" href="index.html">Voir les équipes</a>
+</div>
+
+<div class="grid">
+    <div class="card"><a href="Horaire.html">Horaire complet</a></div>
+    <div class="card"><a href="classement.html">Classement</a></div>
+    <div class="card"><a href="resultat.html">Résultats</a></div>
+    <div class="card"><a href="reglements.html">Règlements</a></div>
+</div>
+
+</body>
+</html>
