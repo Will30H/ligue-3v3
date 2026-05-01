@@ -1,24 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Horaire – Équipe 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horaire Équipe 1 – Ligue 3 vs 3</title>
 
 <style>
-    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
+    body {
+        font-family: Arial, sans-serif;
+        margin:0;
+        padding:0;
+        background:#e9eef5;
+    }
+
+    header {
+        background:#0b1e3d;
+        border-bottom:10px solid #c62828;
+        padding:25px 0;
+        text-align:center;
+        color:white;
+        font-size:32px;
+        font-weight:bold;
+        text-transform:uppercase;
+        box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    }
 
     nav {
-        background:#1a3d7c;
-        padding:15px 0;
-        box-shadow:0 3px 10px rgba(0,0,0,0.15);
-        margin-bottom:25px;
+        background:#12315c;
+        padding:12px 0;
+        box-shadow:0 3px 10px rgba(0,0,0,0.3);
     }
     nav ul {
         list-style:none;
         display:flex;
         justify-content:center;
-        gap:40px;
+        gap:35px;
         margin:0;
         padding:0;
     }
@@ -27,77 +43,140 @@
         text-decoration:none;
         font-size:18px;
         font-weight:bold;
+        transition:0.2s;
+    }
+    nav a:hover {
+        color:#c62828;
     }
 
     .card {
         background:white;
         max-width:900px;
-        margin:auto;
-        padding:25px;
+        margin:40px auto;
+        padding:30px;
         border-radius:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        box-shadow:0 4px 15px rgba(0,0,0,0.25);
+        border-left:8px solid #c62828;
+        border-right:8px solid #0b1e3d;
     }
 
     h1 {
         text-align:center;
-        color:#1a3d7c;
+        color:#0b1e3d;
+        margin-bottom:20px;
+        font-size:30px;
     }
 
     table {
         width:100%;
         border-collapse:collapse;
-        margin-top:15px;
+        margin-top:20px;
         border-radius:10px;
         overflow:hidden;
     }
 
     th {
-        background:#1a3d7c;
+        background:#0b1e3d;
         color:white;
         padding:12px;
         font-size:16px;
+        border-bottom:4px solid #c62828;
+        text-align:center;
     }
 
     td {
         padding:12px;
-        background:#f9fbfd;
-        border-bottom:1px solid #dce3ec;
+        background:#f4f8ff;
+        border-bottom:2px solid #d0d8e4;
         text-align:center;
+        font-size:16px;
     }
 
     tr:nth-child(even) td {
-        background:#eef3f9;
+        background:#e7f1ff;
     }
+
+    .empty {
+        background:#fff3cd !important;
+        font-weight:bold;
+        color:#856404;
+    }@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    header {
+        font-size: 26px;
+        padding: 18px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+<header>Horaire – Équipe 1</header>
+
 <nav>
   <ul>
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="accueil.html">Accueil</a></li>
     <li><a href="index.html">Équipes</a></li>
-    <li><a href="horaire.html">Horaire</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="Horaire.html">Horaire</a></li>
+    <li><a href="classement.html">Classement</a></li>
+    <li><a href="resultat.html">Résultats</a></li>
+    <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="series.html">Séries</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<h1>Horaire – Équipe 1</h1>
-
 <div class="card">
 
-<table>
-<tr><th>Week</th><th>Date</th><th>Adversaire</th></tr>
+<h1>Horaire – Équipe 1</h1>
 
-<tr><td>1</td><td>Jeudi 23 Avril 21h30 Candiac</td><td>2</td></tr>
-<tr><td>2</td><td>Jeudi 30 Avril 21h30 Candiac</td><td>3</td></tr>
-<tr><td>3</td><td>Jeudi 7 Mai 21h30 Candiac</td><td>4</td></tr>
-<tr><td>4</td><td>Jeudi 14 Mai 21h30 Candiac</td><td>2</td></tr>
-<tr><td>5</td><td>Jeudi 21 Mai 21h30 Candiac</td><td>3</td></tr>
-<tr><td>6</td><td>Jeudi 28 Mai 21h30 Candiac</td><td>4</td></tr>
-<tr><td>7</td><td>Jeudi 4 Juin 21h30 Candiac</td><td>2</td></tr>
-<tr><td>8</td><td>Lundi 8 Juin 21h45 TBD</td><td>3</td></tr>
-<tr><td>9</td><td>Lundi 15 Juin 21h45 TBD</td><td>4</td></tr>
+<table>
+<tr>
+    <th>Semaine</th>
+    <th>Date</th>
+    <th>Adversaire</th>
+</tr>
+
+<tr><td>1</td><td>Jeudi 30 Avril – 21h30 – Candiac</td><td>2</td></tr>
+<tr><td>2</td><td>Jeudi 7 Mai – 21h30 – Candiac</td><td>3</td></tr>
+<tr class="empty"><td>3</td><td>Aucun match</td><td>-</td></tr>
+<tr><td>4</td><td>Jeudi 21 Mai – 21h30 – Candiac</td><td>2</td></tr>
+<tr><td>5</td><td>Jeudi 28 Mai – 21h30 – Candiac</td><td>3</td></tr>
+<tr class="empty"><td>6</td><td>Aucun match</td><td>-</td></tr>
+<tr><td>7</td><td>Lundi 8 Juin – 21h45 – TBD</td><td>3</td></tr>
+<tr><td>8</td><td>Jeudi 18 Juin – 21h30 – Candiac</td><td>2</td></tr>
+<tr><td>9</td><td>Lundi 22 Juin – 21h45 – TBD</td><td>4</td></tr>
 
 </table>
 

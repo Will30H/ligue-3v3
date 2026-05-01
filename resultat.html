@@ -2,147 +2,178 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Résultats</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Résultats - Ligue 3 vs 3</title>
 
 <style>
-    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#e9eef5;
+}
 
-    /* MENU */
-    nav {
-        background:#1a3d7c;
-        padding:15px 0;
-        box-shadow:0 3px 10px rgba(0,0,0,0.15);
-        margin-bottom:25px;
-    }
-    nav ul {
-        list-style:none;
-        display:flex;
-        justify-content:center;
-        gap:40px;
-        margin:0;
-        padding:0;
-    }
-    nav a {
-        color:white;
-        text-decoration:none;
-        font-size:18px;
-        font-weight:bold;
-    }
+/* HEADER */
+header {
+    background:#0b1e3d;
+    border-bottom:10px solid #c62828;
+    padding:25px 0;
+    text-align:center;
+    color:white;
+    font-size:34px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
 
-    /* CARD */
-    .card {
-        background:white;
-        max-width:900px;
-        margin:auto;
-        padding:25px;
-        border-radius:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    }
+/* MENU */
+nav {
+    background:#12315c;
+    padding:12px 0;
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+}
 
-    h1 {
-        text-align:center;
-        color:#1a3d7c;
-        margin-bottom:20px;
-    }
+nav ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
 
-    /* TABLEAU */
-    table {
-        width:100%;
-        border-collapse:collapse;
-        margin-top:10px;
-        border-radius:10px;
-        overflow:hidden;
-    }
+nav a {
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+}
 
-    th {
-        background:#1a3d7c;
-        color:white;
-        padding:12px;
-        font-size:16px;
-    }
+/* TABLEAU */
+table {
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
 
-    td {
-        padding:12px;
-        background:#f9fbfd;
-        border-bottom:1px solid #dce3ec;
-        text-align:center;
-        font-size:16px;
-    }
+th {
+    background:#0b1e3d;
+    color:white;
+    padding:12px;
+    font-size:20px;
+}
 
-    tr:nth-child(even) td {
-        background:#eef3f9;
-    }
+td {
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+    font-size:18px;
+}
 
-    .team {
-        font-weight:bold;
-        color:#1a3d7c;
-    }
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    header { font-size:26px; padding:18px 0; }
+    nav ul { flex-direction:column; gap:15px; }
+    nav a { font-size:18px; }
+    table { width:100%; }
+    th, td { padding:10px; font-size:16px; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
+<header>Résultats</header>
+
 <nav>
-  <ul>
-    <li><a href="accueil.html">Accueil</a></li>
-    <li><a href="index.html">Équipes</a></li>
-    <li><a href="Horaire.html">Horaire</a></li>
-    <li><a href="classement.html">Classement</a></li>
-    <li><a href="resultat.html">Résultats</a></li>
-    <li><a href="reglements.html">Règlements</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+    <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="Horaire.html">Horaire</a></li>
+        <li><a href="classement.html">Classement</a></li>
+        <li><a href="resultat.html">Résultats</a></li>
+        <li><a href="reglements.html">Règlements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </nav>
 
-<div class="card">
-    <h1>Résultats des Matchs</h1>
+<!-- TABLEAU AUTOMATIQUE -->
+<table id="table-resultats">
+    <tr>
+        <th>Semaine</th>
+        <th>Match</th>
+        <th>Pointage</th>
+    </tr>
+</table>
 
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Équipe locale</th>
-            <th>Équipe visiteur</th>
-            <th>Score</th>
-            <th>Aréna</th>
-        </tr>
+<script src="matchs.js"></script>
 
-        <!-- Lignes à remplir -->
-        <tr>
-            <td>—</td>
-            <td class="team">—</td>
-            <td class="team">—</td>
-            <td>—</td>
-            <td>—</td>
-        </tr>
+<script>
+// Noms des équipes (modifie-les si tu veux)
+const nomsEquipes = {
+    1: "Équipe 1",
+    2: "Équipe 2",
+    3: "Équipe 3",
+    4: "Équipe 4"
+};
 
-        <tr>
-            <td>—</td>
-            <td class="team">—</td>
-            <td class="team">—</td>
-            <td>—</td>
-            <td>—</td>
-        </tr>
+// Charger scores sauvegardés
+let saved = localStorage.getItem("matchs");
+if (saved) {
+    const updated = JSON.parse(saved);
+    updated.forEach((m, i) => {
+        matchs[i].scoreA = m.scoreA;
+        matchs[i].scoreB = m.scoreB;
+    });
+}
 
-        <tr>
-            <td>—</td>
-            <td class="team">—</td>
-            <td class="team">—</td>
-            <td>—</td>
-            <td>—</td>
-        </tr>
+// Charger classement final pour les séries
+let classementFinal = localStorage.getItem("classementFinal");
+if (classementFinal) {
+    classementFinal = JSON.parse(classementFinal);
 
-        <tr>
-            <td>—</td>
-            <td class="team">—</td>
-            <td class="team">—</td>
-            <td>—</td>
-            <td>—</td>
-        </tr>
+    const equipe1 = classementFinal[0][0];
+    const equipe2 = classementFinal[1][0];
+    const equipe3 = classementFinal[2][0];
+    const equipe4 = classementFinal[3][0];
 
-    </table>
+    matchs.forEach(m => {
+        if (m.equipeA === "Gagnant 1") m.equipeA = equipe1;
+        if (m.equipeA === "Gagnant 2") m.equipeA = equipe2;
+        if (m.equipeA === "Perdant 1") m.equipeA = equipe3;
+        if (m.equipeA === "Perdant 2") m.equipeA = equipe4;
 
-</div>
+        if (m.equipeB === "Gagnant 1") m.equipeB = equipe1;
+        if (m.equipeB === "Gagnant 2") m.equipeB = equipe2;
+        if (m.equipeB === "Perdant 1") m.equipeB = equipe3;
+        if (m.equipeB === "Perdant 2") m.equipeB = equipe4;
+    });
+}
+
+// Affichage automatique
+const table = document.getElementById("table-resultats");
+
+matchs.forEach(m => {
+    const row = document.createElement("tr");
+
+    const matchText = `${nomsEquipes[m.equipeA]} vs ${nomsEquipes[m.equipeB]}`;
+    const scoreText = (m.scoreA !== null && m.scoreB !== null)
+        ? `${m.scoreA} - ${m.scoreB}`
+        : "-";
+
+    row.innerHTML = `
+        <td>${m.semaine}</td>
+        <td>${matchText}</td>
+        <td>${scoreText}</td>
+    `;
+
+    table.appendChild(row);
+});
+</script>
 
 </body>
 </html>
+
+

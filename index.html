@@ -1,25 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Équipes – Ligue 3 vs 3</title>
 
 <style>
-  body { font-family: Arial; background:#f5f5f5; margin:0; padding:0; }
+  body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#e9eef5; /* gris bleuté moderne */
+  }
+
+  /* HEADER */
+  header {
+    background:#0b1e3d; /* bleu hockey */
+    border-bottom:10px solid #c62828; /* ligne rouge style patinoire */
+    padding:25px 0;
+    text-align:center;
+    color:white;
+    font-size:34px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+  }
 
   /* MENU */
   nav {
-    background:#1a3d7c;
-    padding:15px 0;
-    box-shadow:0 3px 10px rgba(0,0,0,0.15);
-    margin-bottom:25px;
+    background:#12315c;
+    padding:12px 0;
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
   }
   nav ul {
     list-style:none;
     display:flex;
     justify-content:center;
-    gap:40px;
+    gap:35px;
     margin:0;
     padding:0;
   }
@@ -28,42 +46,102 @@
     text-decoration:none;
     font-size:18px;
     font-weight:bold;
+    transition:0.2s;
+  }
+  nav a:hover {
+    color:#c62828;
   }
 
   h1 {
     text-align:center;
-    color:#1a3d7c;
-    margin-bottom:30px;
+    color:#0b1e3d;
+    margin:30px 0 10px;
+    font-size:36px;
+    text-shadow:0 2px 5px rgba(0,0,0,0.2);
   }
 
   /* GRID ÉQUIPES */
   .grid {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:20px;
-    max-width:600px;
-    margin:auto;
+    gap:25px;
+    max-width:700px;
+    margin:40px auto;
   }
 
   .team-card {
-    background:white;
-    padding:20px;
-    border-radius:10px;
+    background:#f4f8ff; /* bleu glace */
+    padding:25px;
+    border-radius:15px;
     text-align:center;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
     transition:0.25s;
     text-decoration:none;
     color:black;
+    border:4px solid #c62828; /* rouge hockey */
   }
-  .team-card:hover { transform:scale(1.05); cursor:pointer; }
+  .team-card:hover {
+    transform:scale(1.07);
+    box-shadow:0 6px 18px rgba(0,0,0,0.35);
+    background:#e7f1ff;
+  }
 
-  img { width:100px; height:100px; object-fit:contain; }
+  img {
+    width:110px;
+    height:110px;
+    object-fit:contain;
+    margin-bottom:10px;
+  }
+
+  .team-card h3 {
+    font-size:22px;
+    margin:0;
+    color:#0b1e3d;
+    font-weight:bold;
+  }@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    header {
+        font-size: 26px;
+        padding: 18px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- MENU MIS À JOUR -->
+<header>🏒 Ligue 3 vs 3 – Équipes</header>
+
 <nav>
   <ul>
     <li><a href="accueil.html">Accueil</a></li>
@@ -72,11 +150,12 @@
     <li><a href="classement.html">Classement</a></li>
     <li><a href="resultat.html">Résultats</a></li>
     <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="series.html">Séries</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<h1>Équipes</h1>
+<h1>Les Équipes</h1>
 
 <div class="grid">
 
@@ -97,15 +176,5 @@
 
   <a class="team-card" href="4.html">
     <img src="4.png" alt="Équipe 4">
-    <h3>Équipe 4</h3>
-  </a>
-
-</div>
-
-</body>
-</html>
-
-
-
 
 

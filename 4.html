@@ -2,126 +2,108 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Équipe 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Équipe 4 – Ligue 3 vs 3</title>
 
 <style>
-    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
-
-    nav {
-        background:#1a3d7c;
-        padding:15px 0;
-        box-shadow:0 3px 10px rgba(0,0,0,0.15);
-        margin-bottom:25px;
-    }
+    body { font-family: Arial; margin:0; padding:0; background:#e9eef5; }
+    header { background:#0b1e3d; border-bottom:10px solid #c62828; padding:25px 0; text-align:center; color:white; font-size:34px; font-weight:bold; text-transform:uppercase; }
+    nav { background:#12315c; padding:12px 0; }
+    nav ul { list-style:none; display:flex; justify-content:center; gap:35px; margin:0; padding:0; }
+    nav a { color:white; text-decoration:none; font-size:18px; font-weight:bold; }
+    nav a:hover { color:#c62828; }
+    .card { background:white; max-width:900px; margin:40px auto; padding:30px; border-radius:15px; border-left:8px solid #c62828; border-right:8px solid #0b1e3d; text-align:center; }
+    h1 { color:#0b1e3d; font-size:32px; margin-bottom:10px; }
+    img { width:150px; height:150px; object-fit:contain; margin:20px 0; }
+    h2 { color:#0b1e3d; margin-top:25px; margin-bottom:10px; border-left:6px solid #c62828; padding-left:10px; text-align:left; }
+    table { width:100%; border-collapse:collapse; margin-top:10px; border-radius:10px; overflow:hidden; }
+    th { background:#0b1e3d; color:white; padding:12px; border-bottom:4px solid #c62828; }
+    td { padding:12px; background:#f4f8ff; border-bottom:2px solid #d0d8e4; }
+    tr:nth-child(even) td { background:#e7f1ff; }
+    .button { display:inline-block; margin-top:25px; padding:12px 25px; background:#0b1e3d; color:white; text-decoration:none; font-size:18px; font-weight:bold; border-radius:8px; border:3px solid #c62828; }
+    .button:hover { background:#12315c; transform:scale(1.05); }@media (max-width: 600px) {
     nav ul {
-        list-style:none;
-        display:flex;
-        justify-content:center;
-        gap:40px;
-        margin:0;
-        padding:0;
+        flex-direction: column;
+        gap: 15px;
     }
+
     nav a {
-        color:white;
-        text-decoration:none;
-        font-size:18px;
-        font-weight:bold;
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    header {
+        font-size: 26px;
+        padding: 18px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
     }
 
     .card {
-        background:white;
-        max-width:800px;
-        margin:auto;
-        padding:25px;
-        border-radius:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
-        text-align:center;
+        margin: 20px;
+        padding: 20px;
     }
 
-    img {
-        width:150px;
-        height:150px;
-        object-fit:contain;
-        margin-bottom:20px;
+    table th, table td {
+        padding: 10px;
+        font-size: 15px;
     }
+}
 
-    table {
-        width:100%;
-        border-collapse:collapse;
-        margin-top:20px;
-        border-radius:10px;
-        overflow:hidden;
-    }
-
-    th {
-        background:#1a3d7c;
-        color:white;
-        padding:12px;
-        font-size:16px;
-    }
-
-    td {
-        padding:12px;
-        background:#f9fbfd;
-        border-bottom:1px solid #dce3ec;
-        text-align:center;
-    }
-
-    tr:nth-child(even) td {
-        background:#eef3f9;
-    }
-
-    .btn {
-        display:inline-block;
-        margin-top:25px;
-        padding:12px 25px;
-        background:#1a3d7c;
-        color:white;
-        text-decoration:none;
-        border-radius:8px;
-        font-size:18px;
-        font-weight:bold;
-        transition:0.2s;
-    }
-    .btn:hover { background:#163568; }
 </style>
 </head>
 
 <body>
 
+<header>Équipe 4 – Ligue 3 vs 3</header>
+
 <nav>
   <ul>
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="accueil.html">Accueil</a></li>
     <li><a href="index.html">Équipes</a></li>
-    <li><a href="horaire.html">Horaire</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="Horaire.html">Horaire</a></li>
+    <li><a href="classement.html">Classement</a></li>
+    <li><a href="resultat.html">Résultats</a></li>
+    <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="series.html">Séries</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <div class="card">
-    <h1>Équipe 4</h1>
-    <img src="4.png" alt="Équipe 4">
 
-    <h2 align="left" style="color:#1a3d7c;">Alignement</h2>
+    <h1>Équipe 4</h1>
+    <img src="4.png" alt="Logo Équipe 4">
+
+    <h2>Alignement officiel</h2>
 
     <table>
-        <tr><th>#</th><th>Nom</th></tr>
-
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-
+        <tr><th>Position</th><th>Nom</th></tr>
+        <tr><td>G</td><td></td></tr>
+        <tr><td>F</td><td></td></tr>
+        <tr><td>F</td><td></td></tr>
+        <tr><td>D</td><td></td></tr>
+        <tr><td>F</td><td></td></tr>
+        <tr><td>D</td><td></td></tr>
+        <tr><td>F</td><td></td></tr>
+        <tr><td>F</td><td></td></tr>
+        <tr><td>D</td><td></td></tr>
+        <tr><td>F</td><td></td></tr>
+        <tr><td>F</td><td></td></tr>
     </table>
 
-    <a class="btn" href="horaire-4.html">Voir l’horaire</a>
+    <a href="horaire-4.html" class="button">Voir l'horaire de l'équipe</a>
+
 </div>
 
 </body>
 </html>
+

@@ -2,140 +2,209 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Classement</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classement - Ligue 3 vs 3</title>
 
 <style>
-    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#e9eef5;
+}
 
-    /* MENU */
-    nav {
-        background:#1a3d7c;
-        padding:15px 0;
-        box-shadow:0 3px 10px rgba(0,0,0,0.15);
-        margin-bottom:25px;
+/* HEADER */
+header {
+    background:#0b1e3d;
+    border-bottom:10px solid #c62828;
+    padding:25px 0;
+    text-align:center;
+    color:white;
+    font-size:34px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* MENU */
+nav {
+    background:#12315c;
+    padding:12px 0;
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* TABLEAU */
+table {
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+th {
+    background:#0b1e3d;
+    color:white;
+    padding:12px;
+    font-size:20px;
+}
+
+td {
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+    font-size:18px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 600px) {
+    header {
+        font-size:26px;
+        padding:18px 0;
     }
+
     nav ul {
-        list-style:none;
-        display:flex;
-        justify-content:center;
-        gap:40px;
-        margin:0;
-        padding:0;
+        flex-direction:column;
+        gap:15px;
     }
+
     nav a {
-        color:white;
-        text-decoration:none;
         font-size:18px;
-        font-weight:bold;
     }
 
-    /* CARD */
-    .card {
-        background:white;
-        max-width:900px;
-        margin:auto;
-        padding:25px;
-        border-radius:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-        text-align:center;
-        color:#1a3d7c;
-        margin-bottom:20px;
-    }
-
-    /* TABLEAU CLASSEMENT */
     table {
         width:100%;
-        border-collapse:collapse;
-        margin-top:10px;
-        border-radius:10px;
-        overflow:hidden;
-    }
-
-    th {
-        background:#1a3d7c;
-        color:white;
-        padding:12px;
         font-size:16px;
     }
 
-    td {
-        padding:12px;
-        background:#f9fbfd;
-        border-bottom:1px solid #dce3ec;
-        text-align:center;
+    th, td {
+        padding:10px;
         font-size:16px;
     }
-
-    tr:nth-child(even) td {
-        background:#eef3f9;
-    }
-
-    .team-name {
-        font-weight:bold;
-        color:#1a3d7c;
-    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
+<header>Classement</header>
+
 <nav>
-  <ul>
-    <li><a href="accueil.html">Accueil</a></li>
-    <li><a href="index.html">Équipes</a></li>
-    <li><a href="Horaire.html">Horaire</a></li>
-    <li><a href="classement.html">Classement</a></li>
-    <li><a href="resultat.html">Résultats</a></li>
-    <li><a href="reglements.html">Règlements</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+    <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="Horaire.html">Horaire</a></li>
+        <li><a href="classement.html">Classement</a></li>
+        <li><a href="resultat.html">Résultats</a></li>
+        <li><a href="reglements.html">Règlements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </nav>
 
-<div class="card">
-    <h1>Classement</h1>
+<!-- TABLEAU AUTOMATIQUE -->
+<table id="table-classement">
+    <tr>
+        <th>Position</th>
+        <th>Équipe</th>
+        <th>MJ</th>
+        <th>V</th>
+        <th>D</th>
+        <th>N</th>
+        <th>BP</th>
+        <th>BC</th>
+        <th>PTS</th>
+    </tr>
+</table>
 
-    <table>
-        <tr>
-            <th>Position</th>
-            <th>Équipe</th>
-            <th>MJ</th>
-            <th>V</th>
-            <th>D</th>
-            <th>N</th>
-            <th>PTS</th>
-        </tr>
+<!-- SCRIPT AUTOMATIQUE -->
+<script src="matchs.js"></script>
 
-        <tr>
-            <td>1</td>
-            <td class="team-name">Équipe 1</td>
-            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
+<script>
+// Charger les scores sauvegardés
+let saved = localStorage.getItem("matchs");
+if (saved) {
+    const updated = JSON.parse(saved);
+    updated.forEach((m, i) => {
+        matchs[i].scoreA = m.scoreA;
+        matchs[i].scoreB = m.scoreB;
+    });
+}
 
-        <tr>
-            <td>2</td>
-            <td class="team-name">Équipe 2</td>
-            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
+// Initialiser les stats
+const stats = {
+    1: { pts: 0, v: 0, d: 0, n: 0, bp: 0, bc: 0 },
+    2: { pts: 0, v: 0, d: 0, n: 0, bp: 0, bc: 0 },
+    3: { pts: 0, v: 0, d: 0, n: 0, bp: 0, bc: 0 },
+    4: { pts: 0, v: 0, d: 0, n: 0, bp: 0, bc: 0 }
+};
 
-        <tr>
-            <td>3</td>
-            <td class="team-name">Équipe 3</td>
-            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
+// Calcul automatique
+matchs.forEach(m => {
+    if (m.scoreA === null || m.scoreB === null) return;
 
-        <tr>
-            <td>4</td>
-            <td class="team-name">Équipe 4</td>
-            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
+    stats[m.equipeA].bp += m.scoreA;
+    stats[m.equipeA].bc += m.scoreB;
 
-    </table>
+    stats[m.equipeB].bp += m.scoreB;
+    stats[m.equipeB].bc += m.scoreA;
 
-</div>
+    if (m.scoreA > m.scoreB) {
+        stats[m.equipeA].v++;
+        stats[m.equipeA].pts += 2;
+        stats[m.equipeB].d++;
+    } else if (m.scoreB > m.scoreA) {
+        stats[m.equipeB].v++;
+        stats[m.equipeB].pts += 2;
+        stats[m.equipeA].d++;
+    } else {
+        stats[m.equipeA].n++;
+        stats[m.equipeB].n++;
+        stats[m.equipeA].pts++;
+        stats[m.equipeB].pts++;
+    }
+});
+
+// Trier le classement
+const classement = Object.entries(stats).sort((a, b) => b[1].pts - a[1].pts);
+localStorage.setItem("classementFinal", JSON.stringify(classement));
+
+// Afficher dans le tableau
+const table = document.getElementById("table-classement");
+
+classement.forEach(([equipe, s], index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>Équipe ${equipe}</td>
+        <td>${s.v + s.d + s.n}</td>
+        <td>${s.v}</td>
+        <td>${s.d}</td>
+        <td>${s.n}</td>
+        <td>${s.bp}</td>
+        <td>${s.bc}</td>
+        <td>${s.pts}</td>
+    `;
+    table.appendChild(row);
+});
+</script>
 
 </body>
 </html>
+
+

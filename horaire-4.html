@@ -2,132 +2,101 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Horaire – Équipe 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horaire Équipe 4 – Ligue 3 vs 3</title>
 
 <style>
-    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
-
-    nav {
-        background:#1a3d7c;
-        padding:15px 0;
-        box-shadow:0 3px 10px rgba(0,0,0,0.15);
-        margin-bottom:25px;
-    }
+    body { font-family: Arial; margin:0; padding:0; background:#e9eef5; }
+    header { background:#0b1e3d; border-bottom:10px solid #c62828; padding:25px 0; text-align:center; color:white; font-size:32px; font-weight:bold; text-transform:uppercase; }
+    nav { background:#12315c; padding:12px 0; }
+    nav ul { list-style:none; display:flex; justify-content:center; gap:35px; margin:0; padding:0; }
+    nav a { color:white; text-decoration:none; font-size:18px; font-weight:bold; }
+    nav a:hover { color:#c62828; }
+    .card { background:white; max-width:900px; margin:40px auto; padding:30px; border-radius:15px; border-left:8px solid #c62828; border-right:8px solid #0b1e3d; }
+    h1 { text-align:center; color:#0b1e3d; margin-bottom:20px; font-size:30px; }
+    table { width:100%; border-collapse:collapse; margin-top:20px; border-radius:10px; overflow:hidden; }
+    th { background:#0b1e3d; color:white; padding:12px; border-bottom:4px solid #c62828; }
+    td { padding:12px; background:#f4f8ff; border-bottom:2px solid #d0d8e4; text-align:center; }
+    tr:nth-child(even) td { background:#e7f1ff; }
+    .empty { background:#fff3cd !important; font-weight:bold; color:#856404; }@media (max-width: 600px) {
     nav ul {
-        list-style:none;
-        display:flex;
-        justify-content:center;
-        gap:40px;
-        margin:0;
-        padding:0;
+        flex-direction: column;
+        gap: 15px;
     }
+
     nav a {
-        color:white;
-        text-decoration:none;
-        font-size:18px;
-        font-weight:bold;
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    header {
+        font-size: 26px;
+        padding: 18px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
     }
 
     .card {
-        background:white;
-        max-width:900px;
-        margin:auto;
-        padding:25px;
-        border-radius:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        margin: 20px;
+        padding: 20px;
     }
 
-    h1, h2 {
-        text-align:center;
-        color:#1a3d7c;
+    table th, table td {
+        padding: 10px;
+        font-size: 15px;
     }
+}
 
-    table {
-        width:100%;
-        border-collapse:collapse;
-        margin-top:15px;
-        border-radius:10px;
-        overflow:hidden;
-    }
-
-    th {
-        background:#1a3d7c;
-        color:white;
-        padding:12px;
-        font-size:16px;
-    }
-
-    td {
-        padding:12px;
-        background:#f9fbfd;
-        border-bottom:1px solid #dce3ec;
-        text-align:center;
-    }
-
-    tr:nth-child(even) td {
-        background:#eef3f9;
-    }
 </style>
 </head>
 
 <body>
 
+<header>Horaire – Équipe 4</header>
+
 <nav>
   <ul>
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="accueil.html">Accueil</a></li>
     <li><a href="index.html">Équipes</a></li>
-    <li><a href="horaire.html">Horaire</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="Horaire.html">Horaire</a></li>
+    <li><a href="classement.html">Classement</a></li>
+    <li><a href="resultat.html">Résultats</a></li>
+    <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="series.html">Séries</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<h1>Horaire – Équipe 4</h1>
-
 <div class="card">
 
-    <h2>Jeudi – 21h30 – Aréna de Candiac</h2>
-    <table>
-        <tr><th>Date</th><th>Heure</th><th>Aréna</th></tr>
-        <tr><td>30 avril 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>7 mai 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>14 mai 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>21 mai 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>28 mai 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>4 juin 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>11 juin 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>18 juin 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>25 juin 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>2 juillet 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>9 juillet 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>16 juillet 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>23 juillet 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>30 juillet 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>6 août 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>13 août 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>20 août 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>27 août 2026</td><td>21h30</td><td>Candiac</td></tr>
-        <tr><td>3 septembre 2026</td><td>21h30</td><td>Candiac</td></tr>
-    </table>
+<h1>Horaire – Équipe 4</h1>
 
-    <h2 style="margin-top:40px;">Lundi – 21h45 – Aréna TBD</h2>
-    <table>
-        <tr><th>Date</th><th>Heure</th><th>Aréna</th></tr>
-        <tr><td>8 juin 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>15 juin 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>22 juin 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>29 juin 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>6 juillet 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>13 juillet 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>20 juillet 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>27 juillet 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>3 août 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>10 août 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>17 août 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>24 août 2026</td><td>21h45</td><td>TBD</td></tr>
-        <tr><td>31 août 2026</td><td>21h45</td><td>TBD</td></tr>
-    </table>
+<table>
+<tr><th>Semaine</th><th>Date</th><th>Adversaire</th></tr>
+
+<tr class="empty"><td>1</td><td>Aucun match</td><td>-</td></tr>
+<tr class="empty"><td>2</td><td>Aucun match</td><td>-</td></tr>
+<tr class="empty"><td>3</td><td>Aucun match</td><td>-</td></tr>
+<tr class="empty"><td>4</td><td>Aucun match</td><td>-</td></tr>
+<tr class="empty"><td>5</td><td>Aucun match</td><td>-</td></tr>
+<tr class="empty"><td>6</td><td>Aucun match</td><td>-</td></tr>
+
+<tr><td>7</td><td>Jeudi 11 Juin – 21h30 – Candiac</td><td>2</td></tr>
+<tr><td>8</td><td>Lundi 15 Juin – 21h45 – TBD</td><td>3</td></tr>
+<tr><td>9</td><td>Lundi 22 Juin – 21h45 – TBD</td><td>1</td></tr>
+
+</table>
 
 </div>
 
 </body>
 </html>
+

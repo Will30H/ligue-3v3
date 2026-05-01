@@ -2,23 +2,40 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Équipe 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Équipe 2 – Ligue 3 vs 3</title>
 
 <style>
-    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
+    body {
+        font-family: Arial, sans-serif;
+        margin:0;
+        padding:0;
+        background:#e9eef5;
+    }
 
-    /* MENU */
+    header {
+        background:#0b1e3d;
+        border-bottom:10px solid #c62828;
+        padding:25px 0;
+        text-align:center;
+        color:white;
+        font-size:34px;
+        font-weight:bold;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    }
+
     nav {
-        background:#1a3d7c;
-        padding:15px 0;
-        box-shadow:0 3px 10px rgba(0,0,0,0.15);
-        margin-bottom:25px;
+        background:#12315c;
+        padding:12px 0;
+        box-shadow:0 3px 10px rgba(0,0,0,0.3);
     }
     nav ul {
         list-style:none;
         display:flex;
         justify-content:center;
-        gap:40px;
+        gap:35px;
         margin:0;
         padding:0;
     }
@@ -27,106 +44,180 @@
         text-decoration:none;
         font-size:18px;
         font-weight:bold;
+        transition:0.2s;
+    }
+    nav a:hover {
+        color:#c62828;
     }
 
-    /* CARD */
     .card {
         background:white;
-        max-width:800px;
-        margin:auto;
-        padding:25px;
+        max-width:900px;
+        margin:40px auto;
+        padding:30px;
         border-radius:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        box-shadow:0 4px 15px rgba(0,0,0,0.25);
+        border-left:8px solid #c62828;
+        border-right:8px solid #0b1e3d;
         text-align:center;
+    }
+
+    h1 {
+        color:#0b1e3d;
+        font-size:32px;
+        margin-bottom:10px;
+        text-shadow:0 2px 5px rgba(0,0,0,0.2);
     }
 
     img {
         width:150px;
         height:150px;
         object-fit:contain;
-        margin-bottom:20px;
+        margin:20px 0;
     }
 
-    /* TABLEAU JOUEURS */
+    h2 {
+        color:#0b1e3d;
+        margin-top:25px;
+        margin-bottom:10px;
+        border-left:6px solid #c62828;
+        padding-left:10px;
+        text-align:left;
+    }
+
     table {
         width:100%;
         border-collapse:collapse;
-        margin-top:20px;
+        margin-top:10px;
         border-radius:10px;
         overflow:hidden;
     }
 
     th {
-        background:#1a3d7c;
+        background:#0b1e3d;
         color:white;
         padding:12px;
         font-size:16px;
+        border-bottom:4px solid #c62828;
+        text-align:center;
     }
 
     td {
         padding:12px;
-        background:#f9fbfd;
-        border-bottom:1px solid #dce3ec;
+        background:#f4f8ff;
+        border-bottom:2px solid #d0d8e4;
         text-align:center;
+        font-size:16px;
     }
 
     tr:nth-child(even) td {
-        background:#eef3f9;
+        background:#e7f1ff;
     }
 
-    /* BOUTON */
-    .btn {
+    .button {
         display:inline-block;
         margin-top:25px;
         padding:12px 25px;
-        background:#1a3d7c;
+        background:#0b1e3d;
         color:white;
         text-decoration:none;
-        border-radius:8px;
         font-size:18px;
         font-weight:bold;
+        border-radius:8px;
+        border:3px solid #c62828;
         transition:0.2s;
     }
-    .btn:hover { background:#163568; }
+
+    .button:hover {
+        background:#12315c;
+        transform:scale(1.05);
+    }@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    header {
+        font-size: 26px;
+        padding: 18px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
+<header>Équipe 2 – Ligue 3 vs 3</header>
+
 <nav>
   <ul>
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="accueil.html">Accueil</a></li>
     <li><a href="index.html">Équipes</a></li>
-    <li><a href="horaire.html">Horaire</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="Horaire.html">Horaire</a></li>
+    <li><a href="classement.html">Classement</a></li>
+    <li><a href="resultat.html">Résultats</a></li>
+    <li><a href="reglements.html">Règlements</a></li>
+    <li><a href="series.html">Séries</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <div class="card">
-    <h1>Équipe 2</h1>
-    <img src="2.png" alt="Équipe 2">
 
-    <h2 align="left" style="color:#1a3d7c;">Alignement</h2>
+    <h1>Équipe 2</h1>
+    <img src="2.png" alt="Logo Équipe 2">
+
+    <h2>Alignement officiel</h2>
 
     <table>
-        <tr><th>#</th><th>Nom</th></tr>
+        <tr>
+            <th>Position</th>
+            <th>Nom</th>
+        </tr>
 
-        <tr><td>—</td><td>Phénix Melanson</td></tr>
-        <tr><td>—</td><td>Julien Larouche</td></tr>
-        <tr><td>—</td><td>Tristan Ballan</td></tr>
-        <tr><td>—</td><td>Felix Belleau</td></tr>
-        <tr><td>—</td><td>Felix Leclaire</td></tr>
-        <tr><td>—</td><td>Gabriel Lizotte</td></tr>
-        <tr><td>—</td><td>Isaac Martel</td></tr>
-        <tr><td>—</td><td>Mathis Maurice</td></tr>
-        <tr><td>—</td><td>Samuel Colpron</td></tr>
-        <tr><td>—</td><td>Charle-Antoine Rondeau</td></tr>
-
+        <tr><td>G</td><td>Phénix Melanson</td></tr>
+        <tr><td>F</td><td>Julien Larouche</td></tr>
+        <tr><td>D</td><td>Tristan Ballan</td></tr>
+        <tr><td>D</td><td>Felix Belleau</td></tr>
+        <tr><td>F</td><td>Felix Leclaire</td></tr>
+        <tr><td>F</td><td>Thomas St‑Martin</td></tr>
+        <tr><td>D</td><td>Isaac Martel</td></tr>
+        <tr><td>F</td><td>Mathis Maurice</td></tr>
+        <tr><td>D</td><td>Samuel Colpron</td></tr>
+        <tr><td>F</td><td>Charle‑Antoine Rondeau</td></tr>
+        <tr><td>F</td><td>Nathan Auclair</td></tr>
     </table>
 
-    <a class="btn" href="horaire-2.html">Voir l’horaire</a>
+    <a href="horaire-2.html" class="button">Voir l'horaire de l'équipe</a>
+
 </div>
 
 </body>
 </html>
+

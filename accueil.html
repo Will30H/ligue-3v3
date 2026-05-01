@@ -2,22 +2,40 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Accueil – Ligue 3 vs 3</title>
 
 <style>
-    body { font-family: Arial; background:#eef2f7; margin:0; padding:0; }
+    body {
+        font-family: Arial, sans-serif;
+        margin:0;
+        padding:0;
+        background:#e9eef5;
+    }
+
+    header {
+        background:#0b1e3d;
+        border-bottom:10px solid #c62828;
+        padding:25px 0;
+        text-align:center;
+        color:white;
+        font-size:36px;
+        font-weight:bold;
+        text-transform:uppercase;
+        letter-spacing:2px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    }
 
     nav {
-        background:#1a3d7c;
-        padding:15px 0;
-        box-shadow:0 3px 10px rgba(0,0,0,0.15);
-        margin-bottom:25px;
+        background:#12315c;
+        padding:12px 0;
+        box-shadow:0 3px 10px rgba(0,0,0,0.3);
     }
     nav ul {
         list-style:none;
         display:flex;
         justify-content:center;
-        gap:40px;
+        gap:35px;
         margin:0;
         padding:0;
     }
@@ -26,69 +44,79 @@
         text-decoration:none;
         font-size:18px;
         font-weight:bold;
-    }
-
-    .hero {
-        text-align:center;
-        padding:60px 20px;
-        background:white;
-        margin:20px auto;
-        max-width:900px;
-        border-radius:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-        color:#1a3d7c;
-        font-size:40px;
-        margin-bottom:10px;
-    }
-
-    p {
-        font-size:18px;
-        color:#333;
-        margin-bottom:20px;
-    }
-
-    .btn {
-        display:inline-block;
-        padding:12px 25px;
-        background:#1a3d7c;
-        color:white;
-        text-decoration:none;
-        border-radius:8px;
-        font-size:18px;
-        font-weight:bold;
         transition:0.2s;
     }
-    .btn:hover { background:#163568; }
-
-    .grid {
-        display:grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap:20px;
-        max-width:600px;
-        margin:40px auto;
+    nav a:hover {
+        color:#c62828;
     }
 
     .card {
         background:white;
-        padding:20px;
-        border-radius:10px;
+        max-width:900px;
+        margin:40px auto;
+        padding:35px;
+        border-radius:15px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.25);
+        border-left:8px solid #c62828;
+        border-right:8px solid #0b1e3d;
         text-align:center;
-        box-shadow:0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .card a {
-        text-decoration:none;
-        color:#1a3d7c;
-        font-weight:bold;
-        font-size:18px;
+    h1 {
+        color:#0b1e3d;
+        font-size:32px;
+        margin-bottom:20px;
+        text-shadow:0 2px 5px rgba(0,0,0,0.2);
     }
+
+    p {
+        font-size:19px;
+        color:#333;
+        line-height:1.7;
+        margin-bottom:20px;
+    }@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    header {
+        font-size: 26px;
+        padding: 18px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
 </style>
 </head>
 
 <body>
+
+<header>Accueil – Ligue 3 vs 3</header>
 
 <nav>
   <ul>
@@ -98,24 +126,33 @@
     <li><a href="classement.html">Classement</a></li>
     <li><a href="resultat.html">Résultats</a></li>
     <li><a href="reglements.html">Règlements</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="series.html">Séries</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<div class="hero">
-    <h1>Ligue 3 vs 3</h1>
-    <p>Bienvenue sur le site officiel de la ligue 3 contre 3.  
-       Consulte les équipes, l’horaire, les résultats, le classement et les règlements.</p>
+<div class="card">
 
-    <a class="btn" href="index.html">Voir les équipes</a>
-</div>
+    <h1>Bienvenue dans la Ligue 3 vs 3</h1>
 
-<div class="grid">
-    <div class="card"><a href="Horaire.html">Horaire complet</a></div>
-    <div class="card"><a href="classement.html">Classement</a></div>
-    <div class="card"><a href="resultat.html">Résultats</a></div>
-    <div class="card"><a href="reglements.html">Règlements</a></div>
+    <p>
+        La Ligue 3 vs 3 a été créée cette année par un jeune adulte passionné qui voulait ramener 
+        le plaisir du hockey d’été compétitif.
+    </p>
+
+    <p>
+        La saison comprend <strong>9 matchs de saison régulière</strong>, suivis de 
+        <strong>2 rondes éliminatoires</strong> au format <strong>3 de 5</strong>, offrant un parfait 
+        mélange d’intensité, de stratégie et de plaisir entre amis.
+    </p>
+
+    <p>
+        Une ligue simple, dynamique et pensée pour ceux qui veulent jouer sérieusement… 
+        tout en gardant le sourire.
+    </p>
+
 </div>
 
 </body>
 </html>
+
